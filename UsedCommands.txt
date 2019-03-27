@@ -1,0 +1,10 @@
+1. To generate key pairs with openssl 
+
+Generate keypair:
+openssl genrsa -out keypair.pem 2048
+
+Public key:
+openssl rsa -in keypair.pem -pubout -out publickey.crt
+
+Private key:
+openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in keypair.pem -out privatekey.key
