@@ -22,9 +22,7 @@ int main(int argc, char *argv[]) {
 		if(r.isHashNeed()) {
 			std::cout<<"Hash: ";
 			Hash h{s};
-			std::string result = h.toSHA256();
-			std::cout<<std::hex<<result<<std::endl;
-
+			 h.toSHA256();
 		}
 
 		if(r.isSignNeed()) {

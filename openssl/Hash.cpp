@@ -1,5 +1,5 @@
 #include "Hash.h"
-#include <openssl/sha.h>
+
 
 	Hash::Hash(std::string message):message_{message}{
 		EVP_MD_CTX_init(&ctx_);

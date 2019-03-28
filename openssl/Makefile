@@ -11,7 +11,7 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@ -lssl -lcrypto
 
 .cpp.o:
-	$(CC) $(CFLAGS) $< -o -lssl -lcrypto $@ 
+	$(CC) $(CFLAGS) $< -o $@ -lssl -lcrypto 
 
 clean:
 	rm -rf *.o sigutil

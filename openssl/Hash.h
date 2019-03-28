@@ -3,6 +3,7 @@
 
 #include <string>
 #include <openssl/evp.h>
+#include <vector>
 #include "File.h"
 
 class Hash {
@@ -11,7 +12,7 @@ public:
 	Hash(std::string message);
 	~Hash();
 
-	std::string toSHA256();
+	std::vector<unsigned char> toSHA256();
 
 private:
 	std::string message_;
